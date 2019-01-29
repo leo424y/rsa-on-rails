@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Pub key:</strong>
+  <%= @user.pub_key %>
+</p>
+
+<p>
+  <strong>phones:</strong>
+  <% @user.phones.each do |m| %>
+    <td><%= m.message %> </td>
+  <% end %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
